@@ -3,11 +3,11 @@
 import { CustomButtonProps } from '@/types/index';
 import React from 'react'
 
-export default function CustomButton({title, containerStyles,handleClick}: CustomButtonProps) {
+export default function CustomButton({title, containerStyles,handleClick,btnType}: CustomButtonProps) {
   return (
     <button
       disabled={false}
-      type={"button"}
+      type={ btnType || "button"}
       className={`custom-btn ${containerStyles}`}
       onClick={handleClick}>
       <span className={`flex-1`}>
