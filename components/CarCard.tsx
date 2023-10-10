@@ -1,7 +1,7 @@
 "use client";
 
 import { CarProps } from '@/types/index'
-import { calculateRent } from '@/utils/index';
+import { calculateRent, generateCarImagesUrl } from '@/utils/index';
 import React,{ useState } from 'react'
 import Image from '@/node_modules/next/image'
 import CustomButton from './CustomButton';
@@ -35,7 +35,7 @@ export default function CarCard({car}: CarCardProps) {
 
       <div className='relative w-full h-40 my-3 object-contain'>
         <Image
-          src="/hero.png"
+          src={generateCarImagesUrl(car)}
           alt="car-model"
           fill priority
           className='object-contain' />
